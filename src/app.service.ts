@@ -11,6 +11,6 @@ export class AppService {
   }
 
   async find() {
-    return await this.prisma.post.findMany();
+    return await this.prisma.post.findMany({ orderBy: { id: "desc" } });
   }
 }

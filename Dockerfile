@@ -13,4 +13,5 @@ RUN npm run build
 
 EXPOSE 9000
 
-CMD ["node", "dist/main"]
+# CMD ["node", "npx prisma migrate deploy", "dist/main"]
+CMD ["sh", "-c", "npx prisma migrate deploy && node dist/main"]
